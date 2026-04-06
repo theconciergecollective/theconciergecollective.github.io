@@ -7,9 +7,7 @@ a{text-decoration:none;color:inherit;}
 @media(min-width:900px){.page{padding:32px 60px 80px;}}
 header{max-width:1120px;margin:0 auto 32px;text-align:center;}
 .nav{display:flex;flex-direction:column;align-items:center;gap:14px;}
-.logo-text{font-family:"Cormorant Garamond",serif;font-size:18px;letter-spacing:.18em;text-transform:uppercase;}
-.logo-text span:first-child{color:var(--gold);}
-.logo-text span:last-child{color:var(--off);}
+.logo-text{font-family:"Cormorant Garamond",serif;font-size:18px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);}
 .nav-links{display:flex;gap:22px;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);align-items:center;}
 .nav-links a:hover{color:var(--gold);}
 .ig-link{color:var(--gold);font-weight:500;}
@@ -68,10 +66,7 @@ footer{max-width:1120px;margin:26px auto 0;font-size:11px;color:var(--muted);dis
 
 <header>
   <div class="nav">
-    <div class="logo-text">
-      <span>THE CONCIERGE</span>
-      <span>COLLECTIVE</span>
-    </div>
+    <div class="logo-text">THE CONCIERGE COLLECTIVE</div>
     <nav class="nav-links">
       <a href="#services">Services</a>
       <a href="#journey">Journey</a>
@@ -146,4 +141,48 @@ footer{max-width:1120px;margin:26px auto 0;font-size:11px;color:var(--muted);dis
       <div class="timeline-step"><div class="timeline-marker">1</div><div><div class="timeline-content-title">Private inquiry & alignment</div><p>You share your upcoming procedure, timing, and preferences. We clarify your goals and the level of support you’d like surrounding your surgeon’s plan.</p></div></div>
       <div class="timeline-step"><div class="timeline-marker">2</div><div><div class="timeline-content-title">Pre‑op logistics & environment</div><p>We coordinate arrivals, transportation, and recovery‑ready accommodations to ensure a smooth, stress‑reduced experience.</p></div></div>
       <div class="timeline-step"><div class="timeline-marker">3</div><div><div class="timeline-content-title">After‑care support orchestration</div><p>We coordinate with licensed third‑party professionals—such as private duty nurses and therapeutic providers—to support your recovery.</p></div></div>
-      <div class="timeline-step"><div class="timeline-marker">
+      <div class="timeline-step"><div class="timeline-marker">4</div><div><div class="timeline-content-title">Recovery rhythm & refinement</div><p>We remain your point of contact for adjustments to logistics, timing, and access as you move through recovery.</p></div></div>
+    </div>
+    <aside class="journey-side">
+      <div class="section-kicker">Our role</div>
+      <p>We focus on coordination, logistics, and curated recommendations. While we work closely with licensed professionals, all clinical services are delivered independently by those providers.</p>
+      <p>Our goal is to support the environment and experience surrounding your procedure—not to replace your surgeon or clinical team.</p>
+    </aside>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="section-header">
+    <h2 class="section-title">Begin a private conversation</h2>
+    <div class="section-kicker">By inquiry only</div>
+  </div>
+  <div class="section-body contact-grid">
+    <div class="contact-copy">
+      <p>We work with a limited number of clients to preserve discretion and depth of support. Share a few details below, and we’ll respond with next steps and availability.</p>
+      <p>Submitting an inquiry does not create a client relationship or replace medical advice from your surgeon or healthcare team.</p>
+    </div>
+    <form class="contact-form">
+      <div class="field"><label>Name</label><input type="text" placeholder="First and last name"/></div>
+      <div class="field"><label>Email</label><input type="email" placeholder="Preferred contact email"/></div>
+      <div class="field"><label>City / Region</label><input type="text" placeholder="Where you’ll be recovering"/></div>
+      <div class="field"><label>Procedure timing</label><input type="text" placeholder="Planned date or timeframe"/></div>
+      <div class="field"><label>Desired support</label><select><option>Select an option</option><option>Pre‑op logistics & environment</option><option>Post‑op recovery coordination</option><option>After‑care (nurses, massage, etc.)</option><option>Comprehensive support</option></select></div>
+      <div class="field"><label>Additional details</label><textarea placeholder="Optional context or preferences. Avoid sensitive medical details."></textarea></div>
+      <button type="submit" class="btn btn-primary">Submit inquiry</button>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="footer-top">
+    <div class="disclaimer"><strong>Disclaimer:</strong> The Concierge Collective provides coordination, logistical support, and curated recommendations for surgeons and licensed third‑party providers. We do not provide medical care, medical advice, diagnosis, treatment, or clinical services. All nursing, therapeutic, or wellness services are delivered exclusively by independent, licensed professionals. We coordinate and schedule these services on behalf of our clients but do not supervise, direct, or assume responsibility for their clinical work.</div>
+    <div class="footer-meta">
+      <span>@the_concierge_collective_</span>
+      <span>Surgical & Recovery Support</span>
+    </div>
+  </div>
+</footer>
+
+</div></body></html>
