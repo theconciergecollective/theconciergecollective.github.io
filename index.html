@@ -2,23 +2,36 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>The Concierge Collective | Luxury Lifestyle & Travel Concierge</title>
+  <title>The Concierge Collective | Surgical Concierge & Recovery Services</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="The Concierge Collective offers luxury lifestyle, travel, and in-home experiences including private chefs, spa services, transportation, and curated itineraries." />
+  <meta name="description" content="The Concierge Collective is a white-glove, full-service surgical concierge offering surgeon selection assistance, medical transport, discreet recovery options, and everything in between." />
   <style>
+    :root {
+      --black: #050507;
+      --gold: #d4af37;
+      --mauve: #cfa7b4;
+      --soft-mauve: #2b1f25;
+      --offwhite: #f7f4f5;
+    }
+    * {
+      box-sizing: border-box;
+    }
     body {
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: #111111;
-      background-color: #ffffff;
+      color: #f7f4f5;
+      background-color: var(--black);
     }
-    a { color: inherit; text-decoration: none; }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
     header {
       position: fixed;
       top: 0; left: 0; right: 0;
-      background: rgba(255,255,255,0.96);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid #eee;
+      background: rgba(5,5,7,0.96);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(212,175,55,0.18);
       z-index: 1000;
     }
     .nav {
@@ -31,39 +44,54 @@
     }
     .logo {
       font-weight: 600;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
-      font-size: 14px;
+      font-size: 13px;
+      color: var(--gold);
+    }
+    .logo span {
+      color: var(--offwhite);
+      font-weight: 400;
     }
     .nav-links a {
-      margin-left: 20px;
-      font-size: 14px;
+      margin-left: 22px;
+      font-size: 12px;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.16em;
+      color: #e3dde0;
+      opacity: 0.9;
+    }
+    .nav-links a:hover {
+      color: var(--gold);
     }
     .btn {
       display: inline-block;
-      padding: 10px 20px;
+      padding: 10px 22px;
       border-radius: 999px;
-      border: 1px solid #111;
-      font-size: 14px;
+      border: 1px solid var(--gold);
+      font-size: 12px;
       text-transform: uppercase;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.18em;
+      background: transparent;
+      color: var(--gold);
     }
     .btn-primary {
-      background: #111;
-      color: #fff;
-      border-color: #111;
+      background: var(--gold);
+      color: #050507;
+      border-color: var(--gold);
+    }
+    .btn-primary:hover {
+      filter: brightness(1.05);
     }
     .btn-outline {
       background: transparent;
-      color: #111;
+      color: var(--gold);
     }
     main {
       margin-top: 70px;
     }
     section {
-      padding: 70px 20px;
+      padding: 80px 20px;
     }
     .container {
       max-width: 1100px;
@@ -75,47 +103,63 @@
       gap: 40px;
       align-items: center;
     }
+    .hero-tag {
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      font-size: 11px;
+      margin-bottom: 14px;
+      color: var(--mauve);
+    }
     .hero h1 {
       font-size: 40px;
       line-height: 1.1;
       margin-bottom: 18px;
     }
-    .hero p {
-      font-size: 16px;
-      line-height: 1.6;
-      max-width: 520px;
+    .hero h1 span {
+      color: var(--gold);
     }
-    .hero-tag {
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      font-size: 12px;
-      margin-bottom: 10px;
-      color: #777;
+    .hero p {
+      font-size: 15px;
+      line-height: 1.7;
+      max-width: 540px;
+      color: #d9d3d6;
     }
     .hero-cta {
-      margin-top: 24px;
+      margin-top: 26px;
       display: flex;
       gap: 12px;
       flex-wrap: wrap;
     }
+    .hero-meta {
+      margin-top: 18px;
+      font-size: 12px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #a89aa2;
+    }
     .hero-image {
       width: 100%;
-      height: 360px;
-      border-radius: 24px;
-      background-image: url("https://via.placeholder.com/800x600?text=Luxury+Concierge+Experience");
+      height: 380px;
+      border-radius: 28px;
+      background-image: linear-gradient(135deg, rgba(207,167,180,0.18), rgba(212,175,55,0.08)), url("https://via.placeholder.com/800x600?text=Discreet+Surgical+Concierge");
       background-size: cover;
       background-position: center;
+      border: 1px solid rgba(212,175,55,0.25);
+      box-shadow: 0 26px 60px rgba(0,0,0,0.7);
     }
     .section-title {
       font-size: 26px;
       margin-bottom: 10px;
     }
+    .section-title span {
+      color: var(--gold);
+    }
     .section-subtitle {
-      color: #666;
-      max-width: 520px;
-      font-size: 15px;
-      line-height: 1.6;
-      margin-bottom: 30px;
+      color: #b9afb4;
+      max-width: 560px;
+      font-size: 14px;
+      line-height: 1.7;
+      margin-bottom: 32px;
     }
     .grid-3 {
       display: grid;
@@ -123,29 +167,31 @@
       gap: 24px;
     }
     .card {
-      border-radius: 18px;
-      border: 1px solid #eee;
+      border-radius: 20px;
+      border: 1px solid rgba(212,175,55,0.22);
       padding: 20px;
-      background: #fafafa;
+      background: radial-gradient(circle at top left, rgba(207,167,180,0.12), rgba(5,5,7,0.96));
     }
     .card h3 {
-      font-size: 18px;
+      font-size: 17px;
       margin-bottom: 8px;
     }
     .card p {
-      font-size: 14px;
-      line-height: 1.6;
-      color: #555;
+      font-size: 13px;
+      line-height: 1.7;
+      color: #d3c9ce;
     }
     .pill {
       display: inline-block;
-      padding: 4px 10px;
+      padding: 4px 11px;
       border-radius: 999px;
-      background: #f1f1f1;
-      font-size: 11px;
+      background: rgba(207,167,180,0.16);
+      border: 1px solid rgba(212,175,55,0.3);
+      font-size: 10px;
       text-transform: uppercase;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.18em;
       margin-bottom: 10px;
+      color: #f1e9ec;
     }
     .two-col {
       display: grid;
@@ -159,16 +205,41 @@
       margin: 0;
     }
     .list li {
-      margin-bottom: 10px;
-      font-size: 14px;
+      margin-bottom: 12px;
+      font-size: 13px;
       display: flex;
       align-items: flex-start;
-      gap: 8px;
+      gap: 10px;
+      color: #d7ced2;
     }
     .list li span {
-      font-size: 18px;
+      font-size: 16px;
       line-height: 1;
-      margin-top: 1px;
+      margin-top: 2px;
+      color: var(--gold);
+    }
+    .timeline-step {
+      margin-bottom: 14px;
+      font-size: 13px;
+      color: #d7ced2;
+    }
+    .timeline-step strong {
+      color: var(--offwhite);
+    }
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+    .badge {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(212,175,55,0.35);
+      color: #e7dde1;
     }
     .testimonials {
       display: grid;
@@ -176,37 +247,99 @@
       gap: 24px;
     }
     .quote {
-      font-size: 14px;
-      line-height: 1.6;
-      color: #444;
+      font-size: 13px;
+      line-height: 1.7;
+      color: #e0d7db;
       margin-bottom: 10px;
     }
     .quote-name {
-      font-size: 13px;
+      font-size: 11px;
       text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: #777;
+      letter-spacing: 0.18em;
+      color: #a89aa2;
     }
     .cta-box {
-      border-radius: 24px;
+      border-radius: 26px;
       padding: 30px 24px;
-      background: #111;
-      color: #fff;
+      background: linear-gradient(135deg, #2b1f25, #050507);
+      border: 1px solid rgba(212,175,55,0.35);
       display: flex;
       flex-direction: column;
       gap: 14px;
       align-items: flex-start;
     }
+    .cta-box h2 {
+      margin: 0;
+      font-size: 24px;
+    }
     .cta-box p {
-      font-size: 15px;
-      max-width: 520px;
-      line-height: 1.6;
+      font-size: 14px;
+      max-width: 540px;
+      line-height: 1.7;
+      color: #e7dde1;
+    }
+    .form-field {
+      margin-bottom: 10px;
+    }
+    .form-field label {
+      font-size: 12px;
+      display: block;
+      margin-bottom: 4px;
+      color: #d9d0d4;
+    }
+    .form-field input,
+    .form-field textarea {
+      width: 100%;
+      padding: 9px 11px;
+      border-radius: 999px;
+      border: 1px solid rgba(212,175,55,0.4);
+      background: rgba(5,5,7,0.9);
+      color: #f7f4f5;
+      font-size: 13px;
+      outline: none;
+    }
+    .form-field textarea {
+      border-radius: 16px;
+      resize: vertical;
+      min-height: 90px;
+    }
+    .form-field input::placeholder,
+    .form-field textarea::placeholder {
+      color: #8f828a;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+    .gallery-item {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid rgba(212,175,55,0.25);
+      background: #111;
+      height: 180px;
+      background-size: cover;
+      background-position: center;
+    }
+    .gallery-label {
+      position: absolute;
+      left: 14px;
+      bottom: 12px;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      background: rgba(5,5,7,0.7);
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(212,175,55,0.4);
     }
     .footer {
-      border-top: 1px solid #eee;
-      padding: 30px 20px;
-      font-size: 13px;
-      color: #777;
+      border-top: 1px solid rgba(212,175,55,0.25);
+      padding: 26px 20px;
+      font-size: 12px;
+      color: #a89aa2;
+      background: #050507;
     }
     .footer-inner {
       max-width: 1100px;
@@ -219,16 +352,26 @@
     }
     .social a {
       margin-left: 12px;
-      font-size: 13px;
+      font-size: 11px;
       text-transform: uppercase;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.18em;
+      color: #e3dde0;
+    }
+    .social a:hover {
+      color: var(--gold);
     }
     @media (max-width: 900px) {
-      .hero, .two-col, .grid-3, .testimonials {
+      .hero, .two-col, .grid-3, .testimonials, .gallery-grid {
         grid-template-columns: 1fr;
       }
       .hero-image {
         height: 260px;
+      }
+      .nav-links {
+        display: none;
+      }
+      main {
+        margin-top: 64px;
       }
     }
   </style>
@@ -236,11 +379,11 @@
 <body>
   <header>
     <div class="nav">
-      <div class="logo">The Concierge Collective</div>
+      <div class="logo">The Concierge <span>Collective</span></div>
       <nav class="nav-links">
         <a href="#services">Services</a>
-        <a href="#experiences">Experiences</a>
-        <a href="#testimonials">Clients</a>
+        <a href="#journey">Journey</a>
+        <a href="#gallery">Recovery</a>
         <a href="#contact" class="btn btn-outline">Inquire</a>
       </nav>
     </div>
@@ -251,102 +394,145 @@
     <section id="home">
       <div class="container hero">
         <div>
-          <div class="hero-tag">Luxury lifestyle & travel concierge</div>
-          <h1>Effortless, elevated experiences—curated just for you.</h1>
+          <div class="hero-tag">White-glove surgical concierge</div>
+          <h1>Discreet, full‑service support for your <span>entire surgical journey</span>.</h1>
           <p>
-            The Concierge Collective designs seamless stays, unforgettable celebrations, and stress‑free travel.
-            From private chefs and in‑home spa services to transportation and curated itineraries, we handle every detail so you can simply arrive and enjoy.
+            The Concierge Collective orchestrates every detail of your pre‑op, day‑of, and recovery experience—from surgeon selection assistance and medical transport to discreet recovery accommodations and everything in between.
           </p>
           <div class="hero-cta">
-            <a href="#contact" class="btn btn-primary">Request concierge</a>
-            <a href="#experiences" class="btn btn-outline">View experiences</a>
+            <a href="#contact" class="btn btn-primary">Request concierge consult</a>
+            <a href="#services" class="btn btn-outline">Explore services</a>
+          </div>
+          <div class="hero-meta">
+            Pre‑op • Post‑op • Recovery • Privacy‑first
           </div>
         </div>
-        <div class="hero-image" aria-label="Luxury concierge experience image"></div>
+        <div class="hero-image" aria-label="Discreet surgical concierge experience"></div>
       </div>
     </section>
 
     <!-- SERVICES -->
     <section id="services">
       <div class="container">
-        <h2 class="section-title">Concierge services</h2>
+        <h2 class="section-title">Surgical <span>concierge services</span></h2>
         <p class="section-subtitle">
-          Thoughtfully curated services for travelers, luxury renters, and busy professionals who value time, privacy, and ease.
+          A white‑glove, end‑to‑end service designed for clients who expect medical‑grade discretion, seamless logistics, and elevated care at every step.
         </p>
         <div class="grid-3">
           <div class="card">
-            <div class="pill">In‑home experiences</div>
-            <h3>Private chefs & dining</h3>
+            <div class="pill">Pre‑op</div>
+            <h3>Surgeon selection assistance</h3>
             <p>
-              Enjoy restaurant‑quality meals in the comfort of your home or rental. Custom menus, dietary preferences, and full‑service hosting—from intimate dinners to group celebrations.
-            </p>
-          </div>
-          <div class="card">
-            <div class="pill">Wellness</div>
-            <h3>In‑home spa & self‑care</h3>
-            <p>
-              Transform your space into a spa sanctuary with massage, facials, and wellness add‑ons. Perfect for reset weekends, girls’ trips, and post‑travel recovery.
+              We help you navigate surgeon options, specialties, and locations—curating a shortlist aligned with your goals, procedure type, and preferences, while coordinating consultations and key questions to ask.
             </p>
           </div>
           <div class="card">
             <div class="pill">Logistics</div>
-            <h3>Transportation & coordination</h3>
+            <h3>Medical & private transport</h3>
             <p>
-              Airport transfers, black car service, and day‑to‑day logistics handled with discretion and precision—so your schedule flows without friction.
+              From airport arrivals to clinic transfers and post‑op check‑ups, we arrange vetted medical and private transportation options that prioritize comfort, safety, and discretion.
+            </p>
+          </div>
+          <div class="card">
+            <div class="pill">Recovery</div>
+            <h3>Discreet recovery options</h3>
+            <p>
+              Curated recovery residences, hotel suites, and in‑home setups tailored to your procedure—complete with privacy‑minded layouts, comfort‑focused amenities, and optional in‑home support.
             </p>
           </div>
         </div>
 
-        <div class="grid-3" style="margin-top: 24px;">
+        <div class="grid-3" style="margin-top: 26px;">
           <div class="card">
-            <div class="pill">Experiences</div>
-            <h3>Curated itineraries</h3>
+            <div class="pill">Care coordination</div>
+            <h3>Day‑of surgery support</h3>
             <p>
-              Bespoke experiences tailored to your interests—dining, culture, adventure, wellness, and more. You share your vision; we design the perfect day (or week).
+              We coordinate timing, arrivals, paperwork, and communication with your surgical team, ensuring you and your support person know exactly where to be and when—without the overwhelm.
             </p>
           </div>
           <div class="card">
-            <div class="pill">Stays</div>
-            <h3>Arrival & home setup</h3>
+            <div class="pill">In‑home</div>
+            <h3>Post‑op comfort & essentials</h3>
             <p>
-              Pre‑stocked groceries, welcome amenities, décor, and thoughtful touches that make your arrival feel like stepping into a private boutique hotel.
+              Pre‑stocked recovery kits, comfort items, wardrobe considerations, and environment setup so your space supports healing—from pillows and bedding to nutrition and mobility pathways.
             </p>
           </div>
           <div class="card">
-            <div class="pill">Support</div>
-            <h3>On‑call concierge</h3>
+            <div class="pill">On‑call</div>
+            <h3>Concierge support in between</h3>
             <p>
-              Flexible concierge support for last‑minute needs, reservations, and changes—because life (and travel) doesn’t always go according to plan.
+              Need to adjust a pickup time, add a companion, or extend your stay? We remain on‑call for non‑clinical coordination, so you can focus on rest—not logistics.
             </p>
+          </div>
+        </div>
+
+        <div class="badge-row">
+          <div class="badge">Cosmetic & elective procedures</div>
+          <div class="badge">Domestic & destination surgery</div>
+          <div class="badge">Privacy‑focused clients</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- JOURNEY / HOW IT WORKS -->
+    <section id="journey">
+      <div class="container two-col">
+        <div>
+          <h2 class="section-title">Your surgical <span>concierge journey</span></h2>
+          <p class="section-subtitle">
+            Every client, procedure, and comfort level is different. We design a bespoke experience that quietly holds every detail—from the moment you begin exploring surgery to the day you return to your routine.
+          </p>
+          <div class="timeline-step">
+            <strong>1. Discovery & intentions</strong><br />
+            We begin with a confidential conversation about your goals, timeline, procedure type, and non‑negotiables around privacy, comfort, and support.
+          </div>
+          <div class="timeline-step">
+            <strong>2. Surgeon & destination curation</strong><br />
+            We help you evaluate surgeon options, locations, and clinic reputations, then coordinate consultations and logistics around your chosen path.
+          </div>
+          <div class="timeline-step">
+            <strong>3. Pre‑op planning & logistics</strong><br />
+            Travel, transport, accommodations, support person needs, and recovery environment are mapped out in a clear, elegant itinerary.
+          </div>
+          <div class="timeline-step">
+            <strong>4. Day‑of orchestration</strong><br />
+            We manage timing, transport, and communication touchpoints so your day feels calm, structured, and supported.
+          </div>
+          <div class="timeline-step">
+            <strong>5. Recovery & quiet support</strong><br />
+            Discreet recovery options, comfort‑forward setups, and ongoing logistical support as you move through early healing.
+          </div>
+        </div>
+        <div>
+          <div class="card">
+            <h3>Who we’re for</h3>
+            <ul class="list">
+              <li><span>•</span> Clients seeking cosmetic or elective surgery who value privacy and discretion.</li>
+              <li><span>•</span> Busy professionals who want logistics handled with precision and minimal disruption.</li>
+              <li><span>•</span> Out‑of‑town or destination surgery clients needing full‑journey coordination.</li>
+              <li><span>•</span> Individuals who want a calm, curated, and elevated experience around a vulnerable moment.</li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- EXPERIENCES -->
-    <section id="experiences">
-      <div class="container two-col">
-        <div>
-          <h2 class="section-title">Signature experiences</h2>
-          <p class="section-subtitle">
-            A glimpse into what we create for our clients. Every experience is customized, but these are some of our most‑loved offerings.
-          </p>
-          <ul class="list">
-            <li><span>•</span> Romantic weekend: private chef dinner, rose‑petal turndown, in‑home couples massage, and curated date‑night itinerary.</li>
-            <li><span>•</span> Girls’ trip reset: stocked fridge, welcome cocktails, in‑home spa day, and reservations at the city’s must‑visit spots.</li>
-            <li><span>•</span> Family‑friendly stay: kid‑approved activities, transportation, flexible dining options, and stress‑free scheduling.</li>
-            <li><span>•</span> Celebration package: milestone birthdays, proposals, and special occasions with décor, photography coordination, and surprise elements.</li>
-          </ul>
-        </div>
-        <div>
-          <div class="card">
-            <h3>How it works</h3>
-            <ul class="list">
-              <li><span>1.</span> <strong>Share your dates & vision</strong><br />Tell us who’s coming, what you’re celebrating, and how you want it to feel.</li>
-              <li><span>2.</span> <strong>Receive a curated proposal</strong><br />We design a tailored experience with options that match your style and budget.</li>
-              <li><span>3.</span> <strong>We handle the details</strong><br />You approve, we coordinate. Vendors, timing, logistics—handled.</li>
-              <li><span>4.</span> <strong>Arrive & enjoy</strong><br />Everything is ready when you arrive. You live the moment; we stay behind the scenes.</li>
-            </ul>
+    <!-- GALLERY / RECOVERY AESTHETIC -->
+    <section id="gallery">
+      <div class="container">
+        <h2 class="section-title">Recovery, <span>reimagined</span></h2>
+        <p class="section-subtitle">
+          A glimpse into the environments and details we curate—spaces that feel more like boutique retreats than recovery, designed to support rest, privacy, and ease.
+        </p>
+        <div class="gallery-grid">
+          <div class="gallery-item" style="background-image:url('https://via.placeholder.com/600x400?text=Recovery+Suite');">
+            <div class="gallery-label">Private recovery suites</div>
+          </div>
+          <div class="gallery-item" style="background-image:url('https://via.placeholder.com/600x400?text=Discreet+Transport');">
+            <div class="gallery-label">Discreet transport</div>
+          </div>
+          <div class="gallery-item" style="background-image:url('https://via.placeholder.com/600x400?text=In-Home+Setup');">
+            <div class="gallery-label">In‑home setups</div>
           </div>
         </div>
       </div>
@@ -355,28 +541,28 @@
     <!-- TESTIMONIALS -->
     <section id="testimonials">
       <div class="container">
-        <h2 class="section-title">What our clients are saying</h2>
+        <h2 class="section-title">Client <span>reflections</span></h2>
         <p class="section-subtitle">
-          The Concierge Collective is built on trust, discretion, and word‑of‑mouth. Here’s how our clients describe their experience.
+          Our work is intentionally quiet and behind the scenes. The impact is felt in how calm, supported, and held our clients feel throughout their surgical experience.
         </p>
         <div class="testimonials">
           <div class="card">
             <p class="quote">
-              “Every detail was thought of. We walked into our rental and it felt like a private resort—chef, spa, and activities all perfectly timed.”
+              “I didn’t realize how much I needed this level of support until I had it. Every logistical detail was handled so I could focus on my procedure and healing.”
             </p>
-            <div class="quote-name">Luxury rental guest</div>
+            <div class="quote-name">Cosmetic surgery client</div>
           </div>
           <div class="card">
             <p class="quote">
-              “As busy professionals, we wanted to show up and relax. The Concierge Collective made our anniversary trip completely stress‑free.”
+              “Traveling out of state for surgery felt overwhelming—until The Concierge Collective stepped in. From surgeon selection to recovery accommodations, everything felt intentional and discreet.”
             </p>
-            <div class="quote-name">Anniversary couple</div>
+            <div class="quote-name">Destination surgery client</div>
           </div>
           <div class="card">
             <p class="quote">
-              “Our girls’ trip was next‑level. From the welcome setup to the in‑home spa day, everything felt curated just for us.”
+              “As a busy professional, I needed my surgery and recovery to be as seamless as possible. They anticipated needs I didn’t even know I had.”
             </p>
-            <div class="quote-name">Girls’ weekend group</div>
+            <div class="quote-name">Executive client</div>
           </div>
         </div>
       </div>
@@ -386,28 +572,31 @@
     <section id="contact">
       <div class="container">
         <div class="cta-box">
-          <h2>Ready to elevate your next stay or celebration?</h2>
+          <h2>Ready to explore a curated surgical experience?</h2>
           <p>
-            Share your dates, destination, and what you’re dreaming of. We’ll follow up with a tailored concierge proposal and next steps.
+            Share a few details about your procedure, timeline, and preferences. We’ll follow up with a confidential concierge consult and a tailored outline of how we can support your journey.
           </p>
-          <p style="font-size: 14px; opacity: 0.9;">
-            Submit an inquiry below or connect with us on Instagram at <strong>@the_concierge_collective_</strong>.
+          <p style="font-size: 13px; opacity: 0.9;">
+            This form is for non‑clinical concierge services only. We do not provide medical advice or replace your surgical team.
           </p>
-          <!-- Simple contact "form" structure (to be wired up by dev or platform) -->
-          <form action="#" method="post" style="width: 100%; max-width: 480px;">
-            <div style="margin-bottom: 10px;">
-              <label for="name" style="font-size: 13px; display:block; margin-bottom:4px;">Name</label>
-              <input id="name" name="name" type="text" required style="width:100%; padding:9px 10px; border-radius:999px; border:none;" />
+          <form action="#" method="post" style="width: 100%; max-width: 520px;">
+            <div class="form-field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" required placeholder="First and last name" />
             </div>
-            <div style="margin-bottom: 10px;">
-              <label for="email" style="font-size: 13px; display:block; margin-bottom:4px;">Email</label>
-              <input id="email" name="email" type="email" required style="width:100%; padding:9px 10px; border-radius:999px; border:none;" />
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required placeholder="you@example.com" />
             </div>
-            <div style="margin-bottom: 10px;">
-              <label for="details" style="font-size: 13px; display:block; margin-bottom:4px;">Dates, location & what you’re envisioning</label>
-              <textarea id="details" name="details" rows="4" required style="width:100%; padding:9px 10px; border-radius:16px; border:none;"></textarea>
+            <div class="form-field">
+              <label for="location">City / preferred surgery location</label>
+              <input id="location" name="location" type="text" placeholder="City, state or destination" />
             </div>
-            <button type="submit" class="btn btn-primary">Submit inquiry</button>
+            <div class="form-field">
+              <label for="details">Procedure type, timing & what you’re envisioning</label>
+              <textarea id="details" name="details" rows="4" required placeholder="Cosmetic, elective, or other procedure; ideal dates; privacy or support needs..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit confidential inquiry</button>
           </form>
         </div>
       </div>
@@ -418,7 +607,7 @@
     <div class="footer-inner">
       <div>© <span id="year"></span> The Concierge Collective. All rights reserved.</div>
       <div class="social">
-        <span>Follow</span>
+        <span>Connect</span>
         <a href="https://instagram.com/the_concierge_collective_" target="_blank" rel="noopener noreferrer">Instagram</a>
       </div>
     </div>
