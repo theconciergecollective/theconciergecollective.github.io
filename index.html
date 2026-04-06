@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>The Concierge Collective | Luxury Lifestyle & Travel Concierge</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="The Concierge Collective offers luxury lifestyle, travel, and in-home experiences including private chefs, spa services, transportation, and curated itineraries." />
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #111111;
+      background-color: #ffffff;
+    }
+    a { color: inherit; text-decoration: none; }
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #eee;
+      z-index: 1000;
+    }
+    .nav {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-size: 14px;
+    }
+    .nav-links a {
+      margin-left: 20px;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 999px;
+      border: 1px solid #111;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+    .btn-primary {
+      background: #111;
+      color: #fff;
+      border-color: #111;
+    }
+    .btn-outline {
+      background: transparent;
+      color: #111;
+    }
+    main {
+      margin-top: 70px;
+    }
+    section {
+      padding: 70px 20px;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 40px;
+      align-items: center;
+    }
+    .hero h1 {
+      font-size: 40px;
+      line-height: 1.1;
+      margin-bottom: 18px;
+    }
+    .hero p {
+      font-size: 16px;
+      line-height: 1.6;
+      max-width: 520px;
+    }
+    .hero-tag {
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 12px;
+      margin-bottom: 10px;
+      color: #777;
+    }
+    .hero-cta {
+      margin-top: 24px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .hero-image {
+      width: 100%;
+      height: 360px;
+      border-radius: 24px;
+      background-image: url("https://via.placeholder.com/800x600?text=Luxury+Concierge+Experience");
+      background-size: cover;
+      background-position: center;
+    }
+    .section-title {
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
+    .section-subtitle {
+      color: #666;
+      max-width: 520px;
+      font-size: 15px;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+    }
+    .card {
+      border-radius: 18px;
+      border: 1px solid #eee;
+      padding: 20px;
+      background: #fafafa;
+    }
+    .card h3 {
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+    .card p {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #555;
+    }
+    .pill {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: #f1f1f1;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 10px;
+    }
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 40px;
+      align-items: flex-start;
+    }
+    .list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .list li {
+      margin-bottom: 10px;
+      font-size: 14px;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    .list li span {
+      font-size: 18px;
+      line-height: 1;
+      margin-top: 1px;
+    }
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+    }
+    .quote {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #444;
+      margin-bottom: 10px;
+    }
+    .quote-name {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #777;
+    }
+    .cta-box {
+      border-radius: 24px;
+      padding: 30px 24px;
+      background: #111;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      align-items: flex-start;
+    }
+    .cta-box p {
+      font-size: 15px;
+      max-width: 520px;
+      line-height: 1.6;
+    }
+    .footer {
+      border-top: 1px solid #eee;
+      padding: 30px 20px;
+      font-size: 13px;
+      color: #777;
+    }
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+    .social a {
+      margin-left: 12px;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+    @media (max-width: 900px) {
+      .hero, .two-col, .grid-3, .testimonials {
+        grid-template-columns: 1fr;
+      }
+      .hero-image {
+        height: 260px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <div class="logo">The Concierge Collective</div>
+      <nav class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#experiences">Experiences</a>
+        <a href="#testimonials">Clients</a>
+        <a href="#contact" class="btn btn-outline">Inquire</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="home">
+      <div class="container hero">
+        <div>
+          <div class="hero-tag">Luxury lifestyle & travel concierge</div>
+          <h1>Effortless, elevated experiences—curated just for you.</h1>
+          <p>
+            The Concierge Collective designs seamless stays, unforgettable celebrations, and stress‑free travel.
+            From private chefs and in‑home spa services to transportation and curated itineraries, we handle every detail so you can simply arrive and enjoy.
+          </p>
+          <div class="hero-cta">
+            <a href="#contact" class="btn btn-primary">Request concierge</a>
+            <a href="#experiences" class="btn btn-outline">View experiences</a>
+          </div>
+        </div>
+        <div class="hero-image" aria-label="Luxury concierge experience image"></div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+      <div class="container">
+        <h2 class="section-title">Concierge services</h2>
+        <p class="section-subtitle">
+          Thoughtfully curated services for travelers, luxury renters, and busy professionals who value time, privacy, and ease.
+        </p>
+        <div class="grid-3">
+          <div class="card">
+            <div class="pill">In‑home experiences</div>
+            <h3>Private chefs & dining</h3>
+            <p>
+              Enjoy restaurant‑quality meals in the comfort of your home or rental. Custom menus, dietary preferences, and full‑service hosting—from intimate dinners to group celebrations.
+            </p>
+          </div>
+          <div class="card">
+            <div class="pill">Wellness</div>
+            <h3>In‑home spa & self‑care</h3>
+            <p>
+              Transform your space into a spa sanctuary with massage, facials, and wellness add‑ons. Perfect for reset weekends, girls’ trips, and post‑travel recovery.
+            </p>
+          </div>
+          <div class="card">
+            <div class="pill">Logistics</div>
+            <h3>Transportation & coordination</h3>
+            <p>
+              Airport transfers, black car service, and day‑to‑day logistics handled with discretion and precision—so your schedule flows without friction.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid-3" style="margin-top: 24px;">
+          <div class="card">
+            <div class="pill">Experiences</div>
+            <h3>Curated itineraries</h3>
+            <p>
+              Bespoke experiences tailored to your interests—dining, culture, adventure, wellness, and more. You share your vision; we design the perfect day (or week).
+            </p>
+          </div>
+          <div class="card">
+            <div class="pill">Stays</div>
+            <h3>Arrival & home setup</h3>
+            <p>
+              Pre‑stocked groceries, welcome amenities, décor, and thoughtful touches that make your arrival feel like stepping into a private boutique hotel.
+            </p>
+          </div>
+          <div class="card">
+            <div class="pill">Support</div>
+            <h3>On‑call concierge</h3>
+            <p>
+              Flexible concierge support for last‑minute needs, reservations, and changes—because life (and travel) doesn’t always go according to plan.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCES -->
+    <section id="experiences">
+      <div class="container two-col">
+        <div>
+          <h2 class="section-title">Signature experiences</h2>
+          <p class="section-subtitle">
+            A glimpse into what we create for our clients. Every experience is customized, but these are some of our most‑loved offerings.
+          </p>
+          <ul class="list">
+            <li><span>•</span> Romantic weekend: private chef dinner, rose‑petal turndown, in‑home couples massage, and curated date‑night itinerary.</li>
+            <li><span>•</span> Girls’ trip reset: stocked fridge, welcome cocktails, in‑home spa day, and reservations at the city’s must‑visit spots.</li>
+            <li><span>•</span> Family‑friendly stay: kid‑approved activities, transportation, flexible dining options, and stress‑free scheduling.</li>
+            <li><span>•</span> Celebration package: milestone birthdays, proposals, and special occasions with décor, photography coordination, and surprise elements.</li>
+          </ul>
+        </div>
+        <div>
+          <div class="card">
+            <h3>How it works</h3>
+            <ul class="list">
+              <li><span>1.</span> <strong>Share your dates & vision</strong><br />Tell us who’s coming, what you’re celebrating, and how you want it to feel.</li>
+              <li><span>2.</span> <strong>Receive a curated proposal</strong><br />We design a tailored experience with options that match your style and budget.</li>
+              <li><span>3.</span> <strong>We handle the details</strong><br />You approve, we coordinate. Vendors, timing, logistics—handled.</li>
+              <li><span>4.</span> <strong>Arrive & enjoy</strong><br />Everything is ready when you arrive. You live the moment; we stay behind the scenes.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials">
+      <div class="container">
+        <h2 class="section-title">What our clients are saying</h2>
+        <p class="section-subtitle">
+          The Concierge Collective is built on trust, discretion, and word‑of‑mouth. Here’s how our clients describe their experience.
+        </p>
+        <div class="testimonials">
+          <div class="card">
+            <p class="quote">
+              “Every detail was thought of. We walked into our rental and it felt like a private resort—chef, spa, and activities all perfectly timed.”
+            </p>
+            <div class="quote-name">Luxury rental guest</div>
+          </div>
+          <div class="card">
+            <p class="quote">
+              “As busy professionals, we wanted to show up and relax. The Concierge Collective made our anniversary trip completely stress‑free.”
+            </p>
+            <div class="quote-name">Anniversary couple</div>
+          </div>
+          <div class="card">
+            <p class="quote">
+              “Our girls’ trip was next‑level. From the welcome setup to the in‑home spa day, everything felt curated just for us.”
+            </p>
+            <div class="quote-name">Girls’ weekend group</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT / INQUIRY -->
+    <section id="contact">
+      <div class="container">
+        <div class="cta-box">
+          <h2>Ready to elevate your next stay or celebration?</h2>
+          <p>
+            Share your dates, destination, and what you’re dreaming of. We’ll follow up with a tailored concierge proposal and next steps.
+          </p>
+          <p style="font-size: 14px; opacity: 0.9;">
+            Submit an inquiry below or connect with us on Instagram at <strong>@the_concierge_collective_</strong>.
+          </p>
+          <!-- Simple contact "form" structure (to be wired up by dev or platform) -->
+          <form action="#" method="post" style="width: 100%; max-width: 480px;">
+            <div style="margin-bottom: 10px;">
+              <label for="name" style="font-size: 13px; display:block; margin-bottom:4px;">Name</label>
+              <input id="name" name="name" type="text" required style="width:100%; padding:9px 10px; border-radius:999px; border:none;" />
+            </div>
+            <div style="margin-bottom: 10px;">
+              <label for="email" style="font-size: 13px; display:block; margin-bottom:4px;">Email</label>
+              <input id="email" name="email" type="email" required style="width:100%; padding:9px 10px; border-radius:999px; border:none;" />
+            </div>
+            <div style="margin-bottom: 10px;">
+              <label for="details" style="font-size: 13px; display:block; margin-bottom:4px;">Dates, location & what you’re envisioning</label>
+              <textarea id="details" name="details" rows="4" required style="width:100%; padding:9px 10px; border-radius:16px; border:none;"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit inquiry</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>© <span id="year"></span> The Concierge Collective. All rights reserved.</div>
+      <div class="social">
+        <span>Follow</span>
+        <a href="https://instagram.com/the_concierge_collective_" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
